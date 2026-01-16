@@ -1,98 +1,295 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jammin' Jams</title>
+    <title>Jammin' Jams - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="logo">Jammin' Jams</div>
+        <a href="#" class="logo" onclick="showPage('home')">Jammin' Jams</a>
         <nav>
-            <a id="shop" href="#shop"><img src="https://cdn-icons-png.flaticon.com/512/468/468209.png" alt="shopping bag icon"></a>
-            <a id="about" href="#about"><img src="https://www.freeiconspng.com/uploads/magnifying-glass-icon-11.png" alt="magnifying glass icon"></a>
-            <a id="contact" href="#contact"><img src="https://icons.veryicon.com/png/o/miscellaneous/heg-main-function-icon/phone-98.png" alt="phone icon"></a>
-            <a id="cart" href="#cart"><img src="https://cdn-icons-png.flaticon.com/512/846/846423.png" alt="shopping car iamge"></a>
+            <a href="#" onclick="showPage('shop')"><img src="https://cdn-icons-png.flaticon.com/512/468/468209.png" alt="shopping bag icon"></a>
+            <a href="#" onclick="showPage('about')"><img src="https://www.freeiconspng.com/uploads/magnifying-glass-icon-11.png" alt="magnifying glass icon"></a>
+            <a href="#" onclick="showPage('contact')"><img src="https://icons.veryicon.com/png/o/miscellaneous/heg-main-function-icon/phone-98.png" alt="phone icon"></a>
+            <a href="#" onclick="showPage('cart')"><img src="https://cdn-icons-png.flaticon.com/512/846/846423.png" alt="shopping cart image"></a>
         </nav>
     </header>
-    <main>
-        <section class="hero">
-            <h1>Jammin' Jams</h1>
-            <p>After a stressful day, you can dance the stress away</p>
-            <button id="shop-now">Shop Now</button>
-        </section>
-        <section class="mini-shop">
-            <!--Mini shop-->
-        </section>
-        <h2 class="realworld">Real World Connection</h2>
-        <section class="problem-solution">
-            <div class="problem">
-            <h2>Problem</h2>
-            <p>A long, boring, irritating monday full of hard boring work that always leads to a headache. Hours of pointless stress on the brain just to lead to it being scrapped by the supervisor. A day that leads to nothing.</p>
+
+    <!-- HOME PAGE -->
+    <div id="home-page" class="content-page active">
+        <main>
+            <section class="hero">
+                <h1>Jammin' Jams</h1>
+                <p>After a stressful day, you can dance the stress away</p>
+                <button onclick="showPage('shop')">Shop Now</button>
+            </section>
+            
+            <h2 class="realworld">Real World Connection</h2>
+            <section class="problem-solution">
+                <div class="problem">
+                    <h2>Problem</h2>
+                    <p>A long, boring, irritating monday full of hard boring work that always leads to a headache. Hours of pointless stress on the brain just to lead to it being scrapped by the supervisor. A day that leads to nothing.</p>
+                </div>
+                <div class="solution">
+                    <h2>Solution</h2>
+                    <p>Jump into a comfortable, cozy, and fun onesie that has built in personal surround sound speakers for enhanced audio feedback. Fall into a world of music and dance and block out the headache and hassles. Feel disconnected from the world and into a void of good vibes.</p>
+                </div>
+                <div class="result">
+                    <h2>Result</h2>
+                    <p>Feel the instant mood boost, the relief of the pain-causing day. Feel the instant relief of the stress and tension. Leave all the negativity and look forward to the rest of wonderful day full of life changing opportunities.</p>
+                </div>
+            </section>
+            
+            <section id="xray-section">
+                <h2 class="Works">How it Works</h2>
+                <div class="xray-div">
+                   <img class="xray" src="xray.png" alt="X-ray view of the Jammin' Jams onesie">
+                   <div style="display: flex; flex-direction: column; gap: 20px; flex: 1;">
+                       <p class="speakers-p">The futuristic integrated speaker system fits perfectly into the SoundSuit. Users note that the speakers feel as if they weren't even there. A small battery compartment falls directly beside the speaker system with wiring going through all elements. We only use the newest, highest quality technology to provide the superior user experience to buyers. In addition to the astonishing speakers, having the hood up with the speakers provides an amazing surround sound experience.</p>
+                       <p class="heating-p">The heating and cooling system is also integrated into the onesie, providing a comfortable temperature regardless of the weather. The system is controlled via a small panel on the battery pack, allowing users to adjust the temperature to their liking. Heating & cooling provides <em>full body</em> coverage from your heels to your shoulders. The Jammin' Jams team decided to use separate heating coils from cooling coils to prevent unnecessary wear and tear.</p>
+                   </div>
+                </div>
+                <p class="xray-caption">X-ray view of the Jammin' Jams onesie showing built-in speakers + heating & cooling system.</p>
+            </section>
+            
+            <section class="tutorial">
+                <h2 class="howto">How to Use</h2>
+                <div class="tutorial-container">
+                    <div class="tutorial-step">
+                        <div class="step-number">1</div>
+                        <h3>Put on the Onesie</h3>
+                        <p>Slip into ultimate comfort with our cozy, speaker-equipped onesie</p>
+                    </div>
+                    
+                    <div class="arrow">→</div>
+                    
+                    <div class="tutorial-step">
+                        <div class="step-number">2</div>
+                        <h3>Connect Your Phone</h3>
+                        <p>Quick Bluetooth pairing - your playlist is just seconds away</p>
+                    </div>
+                    
+                    <div class="arrow">→</div>
+                    
+                    <div class="tutorial-step">
+                        <div class="step-number">3</div>
+                        <h3>Dance the Stress Away</h3>
+                        <p>Turn up the volume and let the music move you to happiness</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- SHOP PAGE -->
+    <div id="shop-page" class="content-page">
+        <main>
+            <div class="page-content">
+                <h1 class="page-title">Our Product</h1>
+                <div class="product-container">
+                    <div class="product-image">
+                        <img src="xray.png" alt="SoundSuit Prototype">
+                    </div>
+                    <div class="product-details">
+                        <h2>SoundSuit Prototype</h2>
+                        <p class="product-price">$69.99</p>
+                        <p class="product-description">
+                            Experience the revolutionary SoundSuit Prototype - the world's first wearable audio onesie designed to transform stress into joy through immersive sound and ultimate comfort.
+                        </p>
+                        <ul class="product-features">
+                            <li>Built-in premium surround sound speakers</li>
+                            <li>Integrated heating & cooling system</li>
+                            <li>Bluetooth 5.0 connectivity for seamless pairing</li>
+                            <li>8-hour battery life for all-day comfort</li>
+                            <li>Ultra-soft fleece material</li>
+                            <li>Machine washable (remove battery pack)</li>
+                            <li>One size fits most (adjustable)</li>
+                        </ul>
+                        <button class="add-to-cart-btn" onclick="addToCart()">Pre-Order</button>
+                    </div>
+                </div>
             </div>
-            <div class="solution">
-            <h2>Solution</h2>
-            <p>Jump into a comfortable, cozy, and fun onesie that has built in personal surround sound speakers for enhanced audio feedback. Fall into a world of music and dance and block out the headache and hassles. Feel disconnected from the world and into a void of good vibes.</p>
+        </main>
+    </div>
+
+    <!-- ABOUT PAGE -->
+    <div id="about-page" class="content-page">
+        <main>
+            <div class="page-content">
+                <h1 class="page-title">About Jammin' Jams</h1>
+                <div class="about-content">
+                    <div class="about-section">
+                        <h3>Our Mission</h3>
+                        <p>At Jammin' Jams, we believe that everyone deserves a way to escape the stress of daily life. Our mission is to create innovative wearable technology that combines comfort, music, and relaxation into one revolutionary product. We're not just selling a onesie - we're selling an experience that transforms how you unwind after a long day.</p>
+                    </div>
+                    <div class="about-section">
+                        <h3>Our Story</h3>
+                        <p>Founded in 2026, Jammin' Jams started as a simple idea: what if your favorite cozy outfit could also be your personal concert hall? After many hours of in-depth of research and development, we created the SoundSuit Prototype - a groundbreaking fusion of fashion, technology, and wellness. Today, we're proud to help people dance their stress away, one jam session at a time.</p>
+                    </div>
+                    <div class="about-section">
+                        <h3>Our Technology</h3>
+                        <p>The SoundSuit features cutting-edge audio technology seamlessly integrated into ultra-soft fabric. Our proprietary speaker system delivers crystal-clear sound without adding bulk or weight. The climate control system ensures perfect comfort year-round, while our long-lasting battery keeps you jamming for hours.</p>
+                    </div>
+                    <div class="about-section">
+                        <h3>Why Choose Us</h3>
+                        <p>We're committed to quality, innovation, and customer satisfaction. Every SoundSuit is crafted with premium materials and undergoes rigorous testing. We offer a 30-day satisfaction guarantee because we believe in our product. Pre-order now and soon experience the joy of dancing the stress away with Jammin' Jams.</p>
+                    </div>
+                </div>
+
+                <div class="team-section">
+                    <h2 style="font-size: 42px; margin-bottom: 20px;">Meet the Team</h2>
+                    <div class="team-members">
+                        <div class="team-member">
+                            <div class="team-member-icon">👨‍💼</div>
+                            <h4>Owen Wood</h4>
+                            <p>Co-Founder & CEO</p>
+                        </div>
+                        <div class="team-member">
+                            <div class="team-member-icon">👨‍💻</div>
+                            <h4>Quentin Smith</h4>
+                            <p>Co-Founder & CTO</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="result">
-            <h2>Result</h2>
-            <p>Feel the instant mood boost, the relief of the pain-causing day. Feel the instant relief of the stress and tension. Leave all the negativity and look forward to the rest of wonderful day full of life changing opportunities.</p>
+        </main>
+    </div>
+
+    <!-- CONTACT PAGE -->
+    <div id="contact-page" class="content-page">
+        <main>
+            <div class="page-content">
+                <h1 class="page-title">Contact Us</h1>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h3>Get in Touch</h3>
+                        <p style="margin-bottom: 40px; line-height: 1.8;">Have questions about the SoundSuit? Want to share your jamming experience? We'd love to hear from you!</p>
+                        
+                        <div class="contact-item">
+                            <div class="contact-item-icon">📧</div>
+                            <div>
+                                <strong>Email</strong><br>
+                                support@jamminjams.com
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-item-icon">📱</div>
+                            <div>
+                                <strong>Phone</strong><br>
+                                1-800-JAM-TIME
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-item-icon">📍</div>
+                            <div>
+                                <strong>Address</strong><br>
+                                123 Dance Avenue<br>
+                                Music City, OH 12345
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-item-icon">⏰</div>
+                            <div>
+                                <strong>Hours</strong><br>
+                                Monday - Friday: 9am - 6pm<br>
+                                Saturday - Sunday: 10am - 4pm
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form">
+                        <h3>Send us a Message</h3>
+                        <form onsubmit="submitForm(event)">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
             </div>
-        </section>
-        <section id="xray-section">
-            <h2 class="Works">How it Works</h2>
-            <div class="xray-div">
-               <img class="xray" src="xray.png" alt="X-ray view of the Jammin' Jams onesie showing built-in speakers">
-               <p class="speakers-p">The futuristic integrated speaker system fits perfectly into the SoundSuit. Users note that the speakers feel as if they weren't even there. A small battery compartment falls directly beside the speaker system with wiring going through all elements. We only use the newest, highest quality technology to provide the superior user experience to buyers. In addition to the astonishing speakers, having the hood up with the speakers provides an amazing surround sound experience.</p>
-               <p class="heating-p">The heating and cooling system is also integrated into the onesie, providing a comfortable temperature regardless of the weather. The system is controlled via a small panel on the battery pack, allowing users to adjust the temperature to their liking. Heating & cooling provides <em>full body</em> coverage from your heels to your shoulders. The Jammin' Jams team decided to use separate heating coils from cooling coils to prevent unnecessary wear and tear.</p>
+        </main>
+    </div>
+
+    <!-- CART PAGE -->
+    <div id="cart-page" class="content-page">
+        <main>
+            <div class="page-content">
+                <h1 class="page-title">Shopping Cart</h1>
+                <div class="cart-container">
+                    <div class="cart-empty">
+                        <div class="cart-empty-icon">🛒</div>
+                        <h3>Your cart is empty</h3>
+                        <p>Looks like you haven't added any items to your cart yet. Start jamming today!</p>
+                        <a href="#" class="shop-btn" onclick="showPage('shop')">Shop Now</a>
+                    </div>
+                </div>
             </div>
-            <p class="xray-caption">X-ray view of the Jammin' Jams onesie showing built-in speakers + heating & cooling system.</p>
-        </section>
-        <section class="tutorial">
-            <h2 class="howto">How to Use</h2>
-            <div class="tutorial-container">
-            <div class="tutorial-step">
-            <div class="step-number">1</div>
-              <h3>Put on the Onesie</h3>
-              <p>Slip into comfort...</p>
-            </div>
-  
-            <div class="arrow">→</div>
-  
-            <div class="tutorial-step">
-            <div class="step-number">2</div>
-              <h3>Connect Your Phone</h3>
-              <p>Pair via Bluetooth...</p>
-            </div>
-  
-            <div class="arrow">→</div>
-  
-            <div class="tutorial-step">
-            <div class="step-number">3</div>
-              <h3>Dance the Stress Away</h3>
-              <p>Let the music move you...</p>
-            </div>
-        </section>
-        <section class="credibility">
-            <!--Credibility section content goes here  -->
-        </section>
-    </main>
-    <hr>
+        </main>
+    </div>
+
     <footer>
         <h3>Jammin' Jams</h3>
         <p>"After a stressful day, you can dance the stress away"</p>
         <div>
-          <a href="shop">Shop</a>
-          <a href="about">About</a>
-          <a href="contact">Contact</a>
+            <a href="#" onclick="showPage('shop')">Shop</a>
+            <a href="#" onclick="showPage('about')">About</a>
+            <a href="#" onclick="showPage('contact')">Contact</a>
         </div>
         <div>
             <a href="https://www.facebook.com/jamminjams"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook icon"></a>
             <a href="https://www.twitter.com/jamminjams"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter icon"></a>
             <a href="https://www.instagram.com/jamminjams"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram icon"></a>
         </div>
-        <p>© 2026 Jammin' Jams</p>
+        <p>© 2026 Jammin' Jams - All Rights Reserved</p>
     </footer>
+
+    <script>
+        function showPage(pageName) {
+            // Hide all pages
+            document.querySelectorAll('.content-page').forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Show selected page
+            document.getElementById(pageName + '-page').classList.add('active');
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+
+        function addToCart() {
+            alert('SoundSuit Prototype added to cart! 🎉\n\nNote: This is a prototype demo. No actual purchase will be made.');
+        }
+
+        function submitForm(event) {
+            event.preventDefault();
+            alert('Thank you for your message! We\'ll get back to you soon. 📧');
+            event.target.reset();
+        }
+    </script>
 </body>
 </html>
